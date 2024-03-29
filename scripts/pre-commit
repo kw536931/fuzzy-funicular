@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+RED='\033[1;31m'
+NC='\033[0m'
+
+echo "Checking code format with clang-format ..."
+result=`python3 scripts/git-clang-format.py --diff | grep '@@\|error' | wc -l`
+
+if [ $result -gt 0 ]
+then
+    python3 scripts/git-clang-format.py --diff
+
+    echo "${RED}ERROR: code format check failed${NC}"
+    echo "Tips:"
+    echo "  - Ignore verification: git commit -m \"xxx\" --no-verify"
+    echo "  - Format all changes in current commit: python3 scripts/git-clang-format.py"
+
+    exit 1
+fi

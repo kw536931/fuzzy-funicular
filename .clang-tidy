@@ -1,0 +1,64 @@
+---
+Checks: >
+  bugprone-*,clang-diagnostic-*,clang-analyzer-*,concurrency-*,
+  cppcoreguidelines-*,modernize-*,performance-*,portability-*,readability-*,
+  -modernize-use-trailing-return-type,-modernize-use-nodiscard,
+  -readability-identifier-length,
+  -cppcoreguidelines-pro-bounds-array-to-pointer-decay
+
+FormatStyle: file
+
+CheckOptions:
+
+  # Type names
+  - key: readability-identifier-naming.ClassCase
+    value: CamelCase
+  - key: readability-identifier-naming.EnumCase
+    value: CamelCase
+  - key: readability-identifier-naming.TypeAliasCase
+    value: CamelCase
+  - key: readability-identifier-naming.TypedefCase
+    value: CamelCase
+  - key: readability-identifier-naming.UnionCase
+    value: CamelCase
+  - key: readability-identifier-naming.TypeTemplateParameterCase
+    value: CamelCase
+
+  # Common variable names should be camelCase.
+  - key: readability-identifier-naming.VariableCase
+    value: camelCase
+
+  # Class data member names should be camelCase, with a "_" suffix if the
+  # data member is private.
+  - key: readability-identifier-naming.MemberCase
+    value: camelCase
+  - key: readability-identifier-naming.PrivateMemberSuffix
+    value: '_'
+
+  # Constexpr constant names should be UPPER_CASE.
+  - key: readability-identifier-naming.ConstexprVariableCase
+    value: UPPER_CASE
+
+  # Normal const variables should be camelCase.
+  - key: readability-identifier-naming.ConstantCase
+    value: camelCase
+
+  # Function and class member function names should be camelCase.
+  - key: readability-identifier-naming.FunctionCase
+    value: camelCase
+  - key: readability-identifier-naming.MethodCase
+    value: camelCase
+
+  # Namespace names should be lower_case.
+  - key: readability-identifier-naming.NamespaceCase
+    value: lower_case
+
+  # Enumerator names shold be UPPER_CASE.
+  - key: readability-identifier-naming.EnumConstantCase
+    value: UPPER_CASE
+
+  # Macro names should be UPPER_CASE.
+  - key: readability-identifier-naming.MacroDefinitionCase
+    value: UPPER_CASE
+
+...

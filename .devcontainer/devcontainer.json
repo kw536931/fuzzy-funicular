@@ -1,0 +1,15 @@
+{
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "llvm-vs-code-extensions.vscode-clangd",
+                "ms-python.autopep8",
+                "ms-vscode.cmake-tools",
+                "twxs.cmake"
+            ]
+        }
+    }
+}

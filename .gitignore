@@ -1,0 +1,28 @@
+# IDE and editor related files.
+.idea/
+.vscode/
+
+# macOS Finder garbage.
+.DS_Store
+
+# CPython caches.
+__pycache__/
+
+# Python virtual environments.
+.venv/
+venv/
+
+# pytest caches.
+.pytest_cache/
+
+# Python packaging directories.
+dist/
+*.egg-info/
+
+# clangd compilation database and build caches.
+.cache/
+compile_commands.json
+
+# C++ build directories.
+build/
+build-*/
